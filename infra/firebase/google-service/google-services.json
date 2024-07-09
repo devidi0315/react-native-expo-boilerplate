@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "423803959768",
+    "project_id": "react-native-boilerplate-expo",
+    "storage_bucket": "react-native-boilerplate-expo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423803959768:android:63a94d58cbdf40bdfa5aad",
+        "android_client_info": {
+          "package_name": "com.devidi.rnb_expo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423803959768-ic8bo0n5tm5f92u9o06k2kat3mb5jp1c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devidi.rnb_expo",
+            "certificate_hash": "402c50e30c4af2791c144bf3407a176ce93bdbc4"
+          }
+        },
+        {
+          "client_id": "423803959768-crddrc5g5bnkifi2in1qdhbgpuhpn8jc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1veH2a9wrh0rBUCrHrfyOWmVyYfpFv50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423803959768-crddrc5g5bnkifi2in1qdhbgpuhpn8jc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "423803959768-vbqgr4p8ihqfv3blkntfo6secek731hh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.devidi.rnb-expo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
