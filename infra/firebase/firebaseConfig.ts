@@ -1,5 +1,5 @@
 
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApp as getFirebaseApp } from "firebase/app";
 const firebaseConfig = {
   apiKey: "AIzaSyAiUQpJ2tvuhpTqjMq2XQCrYC1UYBxg3Pw",
   authDomain: "react-native-boilerplate-expo.firebaseapp.com",
@@ -10,5 +10,15 @@ const firebaseConfig = {
   measurementId: "G-TQYKXC3HP7"
 };
 
+
+
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+export const getApp = () => {
+  try {
+    return getFirebaseApp("app")
+  } catch (error) {
+    console.log('init error', error);
+  }
+
+  return initializeApp(firebaseConfig, "app");
+} 

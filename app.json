@@ -1,9 +1,19 @@
 {
   "ios": {
+    "bundleIdentifier": "com.devidi.rnb-expo",
     "googleServicesFile": "./infra/firebase/google-service/GoogleService-Info.plist",
+    "infoPlist": {
+      "CFBundleURLTypes": [
+        {
+          "CFBundleURLSchemes": ["com.googleusercontent.apps.423803959768-vbqgr4p8ihqfv3blkntfo6secek731hh"],
+        },
+      ],
+      "GIDClientID": "423803959768-vbqgr4p8ihqfv3blkntfo6secek731hh.apps.googleusercontent.com"
+    }
   },
   "android": {
-    "googleServicesFile": "./infra/firebase/google-service/GoogleService-Info.plist",
+    "package": "com.devidi.rnb_expo",
+    "googleServicesFile": "./infra/firebase/google-service/google-services.json",
   },
   "expo": {
     "name": "react-native-expo-boilerplate",
@@ -21,7 +31,15 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.devidi.rnb-expo",
-      "googleServicesFile": "./infra/firebase/google-service/google-services.json",
+      "googleServicesFile": "./infra/firebase/google-service/GoogleService-Info.plist",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": ["com.googleusercontent.apps.423803959768-vbqgr4p8ihqfv3blkntfo6secek731hh"],
+          },
+        ],
+        "GIDClientID": "423803959768-vbqgr4p8ihqfv3blkntfo6secek731hh.apps.googleusercontent.com"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -29,7 +47,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.devidi.rnb_expo",
-      "googleServicesFile": "./infra/firebase/google-service/GoogleService-Info.plist",
+      "googleServicesFile": "./infra/firebase/google-service/google-services.json",
     },
     "web": {
       "bundler": "metro",

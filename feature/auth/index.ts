@@ -1,25 +1,22 @@
 
 import * as FBAuth from '@/infra/firebase/auth';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 export class Auth {
 
 
   static async signInGoogle() {
 
-    const provider = new GoogleAuthProvider();
 
-    const user = await FBAuth.signInGoogle();
+    await GoogleSignin.hasPlayServices();
+    const userInfo = await GoogleSignin.signIn();
 
-    // await GoogleSignin.hasPlayServices();
-    // const userInfo = await GoogleSignin.signIn();
+    if (!userInfo.idToken) {
+      throw new Error('idToken is not found');
+    }
 
-    // if (!userInfo.idToken) {
-    //   throw new Error('idToken is not found');
-    // }
-
-    // const user = await FBAuth.signInGoogle(userInfo.idToken);
-    // console.log(user);
-    // return user;
+    const user = await FBAuth.signInGoogle(userInfo.idToken);
+    console.log(user);
+    return user;
   }
 }
