@@ -1,4 +1,10 @@
 {
+  "ios": {
+    "googleServicesFile": "./infra/firebase/google-service/GoogleService-Info.plist",
+  },
+  "android": {
+    "googleServicesFile": "./infra/firebase/google-service/GoogleService-Info.plist",
+  },
   "expo": {
     "name": "react-native-expo-boilerplate",
     "slug": "react-native-expo-boilerplate",

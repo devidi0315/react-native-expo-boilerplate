@@ -1,21 +1,27 @@
 
 import {
-  initializeAuth,
-  getReactNativePersistence,
-} from 'firebase/auth/react-native';
-import { app } from './firebaseConfig';
+  GoogleAuthProvider,
+  getAuth,
+  signInWithCredential,
+} from 'firebase/auth';
+
+import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
+import { app } from './firebaseConfig';
 
-initializeAuth(app, {
+const auth = initializeAuth(app, {
   persistence: getReactNativePersistence(ReactNativeAsyncStorage)
-})
-const auth = getAuth(app);
+});
 
-
-export const signInGoogle = async (idToken: string) => {
+export const signInGoogle = async () => {
   try {
-    const credential = await signInWithCredential(auth, GoogleAuthProvider.credential(idToken));
-    return credential;
+    // const credential = await signInWithCredential(auth, GoogleAuthProvider.credential(idToken));
+    // const provider = new GoogleAuthProvider();
+
+    // signInWithPopup(auth, provider)
+    
+
+    return true;
   } catch (error) {
     throw error
   }
