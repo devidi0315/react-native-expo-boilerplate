@@ -47,7 +47,13 @@
           "iosUrlScheme": "com.googleusercontent.apps.react-native-boilerplate-expo"
         }
       ],
-      "expo-apple-authentication"
+      "expo-apple-authentication",
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/Pretendard/*.ttf"]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

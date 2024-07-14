@@ -15,13 +15,13 @@ export const typography = {
   },
   h3: {
     fontSize: 20,
-    fontWeight: '900',
+    fontWeight: '800',
     lineHeight: 28,
     fontFamily: BaseFont,
   },
   h4: {
     fontSize: 16,
-    fontWeight: '900',
+    fontWeight: '800',
     lineHeight: 24,
     fontFamily: BaseFont,
   },
