@@ -1,5 +1,5 @@
-import { Body1, Body2, H1, H2, H3, H4 } from '@/common/component/Text/Text';
-import Flex from '@/common/component/View/Flex';
+import { Body1, Body2, H1, H2, H3, H4 } from '@/ui/component/Text/Text';
+import Flex from '@/ui/component/View/Flex';
 import { ScrollView } from 'react-native';
 import styled from 'styled-components';
 

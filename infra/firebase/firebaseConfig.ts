@@ -1,24 +1,32 @@
 
-import { initializeApp, getApp as getFirebaseApp } from "firebase/app";
-const firebaseConfig = {
-  apiKey: "AIzaSyAiUQpJ2tvuhpTqjMq2XQCrYC1UYBxg3Pw",
-  authDomain: "react-native-boilerplate-expo.firebaseapp.com",
-  projectId: "react-native-boilerplate-expo",
-  storageBucket: "react-native-boilerplate-expo.appspot.com",
-  messagingSenderId: "423803959768",
-  appId: "1:423803959768:web:d3c15d2fb3e93b85fa5aad",
-  measurementId: "G-TQYKXC3HP7"
-};
+import { initializeApp, getApp as getFirebaseApp, FirebaseOptions, FirebaseApp } from "firebase/app";
+import { getReactNativePersistence, initializeAuth } from "firebase/auth";
+import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
 
 
+export function getFirebaseConfig(prefix: string) {
+  return {
+    apiKey: process.env[`${prefix}_API_KEY`],
+    authDomain: process.env[`${prefix}_AUTH_DOMAIN`],
+    projectId: process.env[`${prefix}_PROJECT_ID`],
+    storageBucket: process.env[`${prefix}_STORAGE_BUCKET`],
+    messagingSenderId: process.env[`${prefix}_MESSAGING_SENDER_ID`],
+    appId: process.env[`${prefix}_APP_ID`],
+    measurementId: process.env[`${prefix}_MEASUREMENT_ID`]
+  }
+}
 
-// Initialize Firebase
-export const getApp = () => {
+export const getApp = (firebaseConfig: FirebaseOptions) => {
   try {
     return getFirebaseApp("app")
   } catch (error) {
     console.log('init error', error);
   }
-
   return initializeApp(firebaseConfig, "app");
 } 
+
+export const getAuth = (app: FirebaseApp) => {
+  return initializeAuth(app, {
+    persistence: getReactNativePersistence(ReactNativeAsyncStorage)
+  });
+}

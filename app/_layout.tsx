@@ -1,5 +1,5 @@
-import { useInit } from '@/common/hook/useInit';
-import { AppThemeProvider } from '@/common/theme/ThemeProvider';
+import { useInit } from '@/ui/hook/useInit';
+import { AppThemeProvider } from '@/ui/theme/ThemeProvider';
 import { Stack } from 'expo-router';
 import 'react-native-reanimated';
 import { SafeAreaProvider } from 'react-native-safe-area-context';

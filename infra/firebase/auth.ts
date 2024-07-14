@@ -4,19 +4,26 @@ import {
   signInWithCredential,
 } from 'firebase/auth';
 
-import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
-import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
-import { getApp } from './firebaseConfig';
+import { RNBFirebaseApp } from './RNBFirebaseApp';
+import { RNBUser } from '@/feature/auth/auth.dto';
 
-const auth = initializeAuth(getApp(), {
-  persistence: getReactNativePersistence(ReactNativeAsyncStorage)
-});
 
-export const signInGoogle = async (idToken: string) => {
-  try {
-    const credential = await signInWithCredential(auth, GoogleAuthProvider.credential(idToken));
-    return credential;
-  } catch (error) {
-    throw error
+export class RNBAuth implements InfraAuthService{
+  app: RNBFirebaseApp
+  constructor(app: RNBFirebaseApp) {
+    this.app = app;
+  }
+  async signInGoogle(idToken: string): Promise<RNBUser> {
+    try {
+      const credential = await signInWithCredential(this.app.auth, GoogleAuthProvider.credential(idToken));
+      return RNBUser.parse({
+        uid: credential.user.uid,
+        displayName: credential.user.displayName,
+        email: credential.user.email,
+        photoURL: credential.user
+      });
+    } catch (error) {
+      throw error
+    }
   }
 }

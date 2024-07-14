@@ -1,5 +1,5 @@
-import { Body1, H1 } from '@/common/component/Text/Text';
-import Flex from '@/common/component/View/Flex';
+import { Body1, H1 } from '@/ui/component/Text/Text';
+import Flex from '@/ui/component/View/Flex';
 import { Link, Stack } from 'expo-router';
 import { StyleSheet } from 'react-native';
 

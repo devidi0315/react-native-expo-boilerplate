@@ -1,5 +1,5 @@
-import Flex from '@/common/component/View/Flex';
-import { Body1, H1 } from '@/common/component/Text/Text';
+import Flex from '@/ui/component/View/Flex';
+import { Body1, H1 } from '@/ui/component/Text/Text';
 import { router } from 'expo-router';
 import { Pressable, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
