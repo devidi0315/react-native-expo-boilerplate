@@ -6,6 +6,8 @@ export const colors = {
   warning: '#ffc107',
   info: '#17a2b8',
   text: '#212529',
+  bg: "#F9F5F0",
+  cardBg: "#FFFFFF",
 };
 
 export type BaseColors = typeof colors;
