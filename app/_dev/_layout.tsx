@@ -15,9 +15,9 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <AppThemeProvider>
         <Stack>
-          <Stack.Screen name="index" options={{ headerShown: false }} />
-          <Stack.Screen name="_dev" options={{ headerShown: true }} />
-          <Stack.Screen name="+not-found" />
+          <Stack.Screen name="index" options={{ headerShown: true }} />
+          <Stack.Screen name="auth/login" options={{ headerShown: true }} />
+          <Stack.Screen name="ui/common" options={{ headerShown: true }} />
         </Stack>
       </AppThemeProvider>
     </SafeAreaProvider>

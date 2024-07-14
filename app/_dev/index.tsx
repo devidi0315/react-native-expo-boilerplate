@@ -11,7 +11,8 @@ export default function Page() {
 
       <Flex flex={1}>
         <ScrollView>
-          <MenuItem onPress={() => router.push('/_dev')} text="개발페이지 이동" />
+          <MenuItem onPress={() => router.push('_dev/ui/typography')} text="typography 페이지" />
+          <MenuItem onPress={() => router.push('_dev/auth/login')} text="로그인페이지" />
         </ScrollView>
       </Flex>
     </SafeAreaView>
